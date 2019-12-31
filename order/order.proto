@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service Order {
+    rpc CreateOrder(CreateOrderRequest) returns (CreateOrderResponse) {}
+}
+
+message CreateOrderRequest {
+    string userID = 1;
+    double amount = 2;
+}
+
+message CreateOrderResponse {
+    string orderID = 1;
+    string message = 2;
+}
